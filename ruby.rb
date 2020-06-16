@@ -1,35 +1,16 @@
-def caught_speeding(speed, is_birthday)
-  if is_birthday
-    your_speed = speed / 5
+def close_far(a,b,c)
+  if ( (a - b).abs == 1 || (a - c).abs == 1 ) && (b - c).abs >= 2
+    p "TRUE"
   else
-    your_speed = speed
-  end
-  if your_speed.round >= 81
-    p "2"
-  elsif your_speed.round <= 60
-    p "0"
-  else
-    p "1"
+    p "FALSE"
   end
 end
 
+# absは正の整数に直してくれる
 
-def caught_speeding(speed, is_birthday)
-  speed_rounded = speed.round(1)
-
-  if speed_rounded <= 60
-    point = 0
-  elsif speed_rounded <= 80
-    point = 1
-  else
-    point = 2
-  end
-  puts is_birthday ? point * 5 : point
-end
-
-caught_speeding(200, false)
-#  → 0
-caught_speeding(85, false)
-#  → 1
-caught_speeding(505, true)
-#  → 0
+close_far(-1, 2, 10) 
+# → True
+close_far(1, 2, 3) 
+# → False
+close_far(4, 1, 3) 
+# → True
