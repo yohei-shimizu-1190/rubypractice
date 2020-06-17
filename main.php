@@ -3,12 +3,14 @@
 
 function sum($a, $b, $c)
 {
-  return $a + $b + $c * $rate;
+  $total = $a + $b + $c;
+
+  if ($total < 0) {
+    return 0;
+  } else {
+    return $total;
+  }
 }
 
-// 無名関数
-$sum = function ($a, $b, $c) {
-  return $a + $b + $c;
-};
-
-echo $sum(100, 300, 200) . PHP_EOL;
+echo sum(200, -1000, 500); // 0
+echo sum(200, 1000, 500);  // 1700
