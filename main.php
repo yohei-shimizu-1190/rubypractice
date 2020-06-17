@@ -1,13 +1,35 @@
 <?php
 
-declare(strict_types=1);
+$scores = [
+  90, 40, 100
+];
 
-//  : string の前に?をつけることで、返り値が stringか null のどちらかなら通る
-// 引数の型にもつけられるが、null以外の方法はない
-function getAward(?int $score): ?string
-{
-  return $score >= 80 ? "Gold Medal" : null;
-}
+$scores[0] = 20;
+echo $scores[0]; //20
 
-echo getAward(100); // Gold Medal
-echo getAward(30); // null
+
+// 配列の呼び出し方を変えられる（左をキーという）
+$scores = [
+  'first' => 90,
+  'second' => 40,
+  'third' => 100
+];
+
+echo $scores['third']; //100
+
+var_dump($scores);
+// array(3) {
+//   ["first"]=>
+//   int(90)
+//   ["second"]=>
+//   int(40)
+//   ["third"]=>
+//   i
+
+print_r($scores);
+// Array
+// (
+//     [first] => 90
+//     [second] => 40
+//     [third] => 100
+// )
