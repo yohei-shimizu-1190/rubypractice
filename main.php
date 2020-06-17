@@ -1,16 +1,15 @@
 <?php
+// declareをつけないと、"99" という文字列の数字がphpの変換によって通ってしまう。
+// declareで強い片付けを実行する
+declare(strict_types=1);
 
-
-function sum($a, $b, $c)
+// 受け取る引数の型を指定できる！ : voidでは返り値の型は自由としている
+function showInfo(string $name, int $score): void
 {
-  $total = $a + $b + $c;
-
-  if ($total < 0) {
-    return 0;
-  } else {
-    return $total;
-  }
+  echo $name . ":" . $score . PHP_EOL;
 }
 
-echo sum(200, -1000, 500); // 0
-echo sum(200, 1000, 500);  // 1700
+showInfo('taguchi', "99");
+
+// Fatal error: Uncaught TypeError: Argument 2 passed to showInfo() must be of the type int, string given, called in /Users/yohei/Desktop/rubypractice/main.php on line 11 and defined in /Users/yohei/Desktop/rubypractice/main.php:6
+// 2番めの引数（argument） がintかと思っていたが、stringを受け取ったというエラーになる！
