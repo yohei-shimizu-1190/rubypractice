@@ -1,15 +1,17 @@
-def xyz_there(str) 
-  if str.include?('.xyz')
-    p "False"
-  elsif str.include?('xyz')
+def end_other(leftstr, rightstr)
+  leftstr.downcase!
+  rightstr.downcase!
+  if leftstr[-1] == rightstr[-1]
     p "True"
   else
-    p "False"
+    p "Faulse"
   end
 end
-xyz_there('abcxyz') 
+
+
+end_other('Hiabc', 'abc') 
 # → True
-xyz_there('abc.xyz') 
-# → False
-xyz_there('xyz.abc') 
+end_other('AbC', 'HiaB') 
+# → True
+end_other('abc', 'abXabc') 
 # → True
