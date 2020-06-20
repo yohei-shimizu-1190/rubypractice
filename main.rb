@@ -1,17 +1,9 @@
-def end_other(leftstr, rightstr)
-  leftstr.downcase!
-  rightstr.downcase!
-  if leftstr[-1] == rightstr[-1]
-    p "True"
-  else
-    p "Faulse"
-  end
+def count_coxe(str)
+  p str.scan(/co.e/).length
 end
-
-
-end_other('Hiabc', 'abc') 
-# → True
-end_other('AbC', 'HiaB') 
-# → True
-end_other('abc', 'abXabc') 
-# → True
+count_coxe('aaacodebbb') 
+# → 1
+count_coxe('codexxcode') 
+# → 2
+count_coxe('cozexxcope')
+#  → 2
