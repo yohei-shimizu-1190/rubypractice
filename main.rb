@@ -1,20 +1,9 @@
-def lone_sum(a, b, c) 
-  if a == b && b == c
-    p 0
-  elsif a == b
-    p c
-  elsif a == c
-    p b
-  elsif b == c
-    p a
-  else
-    p (a + b + c)
-  end
+def count_hi(str) 
+  p str.scan('hi').length
 end
-lone_sum(1, 2, 3) 
-# → 6
-lone_sum(3, 2, 3)
-#  → 2
-lone_sum(3, 3, 3) 
-# → 0
-
+count_hi('abc hi ho') 
+# → 1
+count_hi('ABChi hi') 
+# → 2
+count_hi('hihi') 
+# → 2
