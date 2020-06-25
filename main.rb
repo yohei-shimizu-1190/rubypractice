@@ -1,6 +1,29 @@
-array = gets.split(' ')
-array.sort!
-i1 = array[3].to_s + array[0].to_s
-i2 =  array[2].to_s + array[1].to_s
+# def repeat(f, *args)
+#   Enumerator.new { |y| loop { y << (*args = f[*args]) } }
+# end
 
-p i1.to_i + i2.to_i
+# def tribo
+#   ->a,b,c{ [b, c, a+b+c] }
+# end
+
+
+# tribonacci = repeat(tribo, 1, 0, 5)
+# array = []
+# p tribonacci.take(32).map(&:first)
+
+# def f(x)
+#   a = x * x * x * x
+#   return a
+# end
+
+# (1..64).each do |x|
+#   array = []
+#   sum = 0
+#   sum += f(x)
+#   array << sum
+#   p array
+# end
+
+
+p (1.to_f/2)
+
