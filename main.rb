@@ -40,7 +40,6 @@ end
 def exception
   puts "入力された値は無効な値です"
 end
-
 # 配列オブジェクトpostsの生成
 posts = []
 
