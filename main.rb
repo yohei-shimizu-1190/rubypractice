@@ -19,6 +19,7 @@ def post_review(a_posts) # ここで引数を受け取るようにする
   ## コードを書く
   a_posts << post
 
+  
   # postを追加した配列オブジェクトを返り値として返す
   ## コードを書く
   return a_posts
