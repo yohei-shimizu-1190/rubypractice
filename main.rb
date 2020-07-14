@@ -39,7 +39,7 @@ def end_program
 end
 
 def exception
-  puts "入力された値は無効な値です"
+  puts "入力された値は無効な値です()"
 end
 # 配列オブジェクトpostsの生成
 posts = []
@@ -55,8 +55,12 @@ while true do
   if input == 0 then
     posts = post_review(posts)   # post_reviewメソッドの呼び出し
     # ↑で実引数と仮引数は違う名前にしているのは、最新の配列（最新の登録情報が入っている）をメソッドの返り値（return）として、元の配列に代入するため！
-  elsif input == 1 then
-    read_reviews(posts) 
+  elsif input == 1 
+    if  posts.length == 0
+      puts "レビューはまだありません！！"
+    else
+      read_reviews(posts) 
+    end
   elsif input == 2 then
     end_program
   else
