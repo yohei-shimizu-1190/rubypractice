@@ -1,8 +1,13 @@
-function calc(num1, num2) {
-  return num1 * num2;
-  // returnで返り値を明示する必要あり
+// 関数宣言
+function hello() {
+  console.log('hello');
 }
 
-let num1 = 5;
-let num2 = 3;
-console.log(calc(num1, num2));
+hello();
+
+// 無名関数
+let hello = function () {
+  console.log('hello');
+}
+
+hello();
