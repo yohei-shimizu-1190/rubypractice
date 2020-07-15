@@ -24,8 +24,19 @@ class Review
   end
 end
 
-review = Review.new
-# これもクラスメソッド↑
-review.show_review
+while true do
+  puts "書いたレビュー数は#{Review.get_review_count}個です"
+  puts "【0】レビューを書く"
+  puts "【1】終了"
 
-puts Review.get_review_count
+  input = gets.to_i
+  if input == 0
+    review = Review.new
+    # これもクラスメソッド↑
+    review.show_review
+  elsif input == 1
+    exit
+  else 
+    puts "無効な値です！！"
+  end
+end
