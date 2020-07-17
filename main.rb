@@ -19,7 +19,7 @@ def post_review(a_posts) # ここで引数を受け取るようにする
   ## コードを書く
   a_posts << post
 
-  
+
   # postを追加した配列オブジェクトを返り値として返す
   ## コードを書く
   return a_posts
@@ -55,11 +55,11 @@ while true do
   if input == 0 then
     posts = post_review(posts)   # post_reviewメソッドの呼び出し
     # ↑で実引数と仮引数は違う名前にしているのは、最新の配列（最新の登録情報が入っている）をメソッドの返り値（return）として、元の配列に代入するため！
-  elsif input == 1 
+  elsif input == 1
     if  posts.length == 0
       puts "レビューはまだありません！！"
     else
-      read_reviews(posts) 
+      read_reviews(posts)
     end
   elsif input == 2 then
     end_program
