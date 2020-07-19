@@ -1,8 +1,17 @@
-// documentは該当するページのDOMツリーが入っているオブジェクト。documentに対してメソッドを使用することで操作できる。
 
-document.getElementById("id");
-// ID名
-document.getElementsByClassName("class");
-// クラス名（複数形のため注意）
-document.querySelector("button#Button2");
-// セレクタ名で最初に合致した要素を取得する。今夏はボタンセレクタのidも合わせて指定している。
+let btn = document.querySelector("button#Button2");
+function printHello() {
+  console.log("Hello!!");
+}
+btn.addEventListener("click", printHello);
+
+// btnに対して、clickイベントとprintHello関数を紐付けるイベントリスナを追加
+// addEventListener（①イベントの種類、②関数）
+
+
+// 上をリファクタリング
+// ↓
+let btn = document.querySelector("button#Button2");
+btn.addEventListener("click", function () {
+  console.log("Hello!");
+});
