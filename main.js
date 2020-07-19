@@ -1,17 +1,10 @@
-
-let btn = document.querySelector("button#Button2");
-function printHello() {
-  console.log("Hello!!");
-}
-btn.addEventListener("click", printHello);
-
-// btnに対して、clickイベントとprintHello関数を紐付けるイベントリスナを追加
-// addEventListener（①イベントの種類、②関数）
+// ボタン2を押したらテキスト内容が変更する操作
 
 
-// 上をリファクタリング
-// ↓
-let btn = document.querySelector("button#Button2");
-btn.addEventListener("click", function () {
-  console.log("Hello!");
+let btn2 = document.getElementById("#Button2");
+let changeText = document.querySelector("p");
+
+btn2.addEventListener("click", function () {
+  changeText.innerHTML = "ボタンが押されました";
+  // this.innerHTMLを使用するとHTML要素の中身が変更できる。
 });
