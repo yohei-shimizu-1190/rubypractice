@@ -1,7 +1,8 @@
-for (let i = 0; i < 10; i += 1) {
-  console.log('hello')
-}
+// documentは該当するページのDOMツリーが入っているオブジェクト。documentに対してメソッドを使用することで操作できる。
 
-
-window.alert('alert!!');
-// ページを開くとモーダルウィンドウが出る
+document.getElementById("id");
+// ID名
+document.getElementsByClassName("class");
+// クラス名（複数形のため注意）
+document.querySelector("button#Button2");
+// セレクタ名で最初に合致した要素を取得する。今夏はボタンセレクタのidも合わせて指定している。
